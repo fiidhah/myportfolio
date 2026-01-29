@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fidha | Portfolio</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <style>
+        body {
+            scroll-behavior: smooth;
+        }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, #0d6efd, #6610f2);
+            color: white;
+            padding: 130px 0;
+        }
+
+        .hero img {
+            width: 190px;
+            height: 190px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 6px solid #fff;
+            transition: 0.4s;
+        }
+
+        .hero img:hover {
+            transform: scale(1.08);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+        }
+
+        /* Navbar underline */
+        .nav-link {
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: #0d6efd;
+            left: 0;
+            bottom: 0;
+            transition: 0.3s;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* Section title */
+        .section-title {
+            margin-bottom: 40px;
+            font-weight: bold;
+        }
+
+        .section-title::after {
+            content: "";
+            width: 60px;
+            height: 4px;
+            background: #0d6efd;
+            display: block;
+            margin: 10px auto 0;
+        }
+
+        /* Skills */
+        .skill-badge {
+            font-size: 1rem;
+            margin: 6px;
+            padding: 10px 14px;
+            transition: 0.3s;
+        }
+
+        .skill-badge:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        /* Project cards */
+        .project-card {
+            border: none;
+            color: white;
+            transition: 0.4s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-12px) scale(1.02);
+            box-shadow: 0 20px 35px rgba(0,0,0,0.3);
+        }
+
+        .card-portfolio {
+            background: linear-gradient(135deg, #0d6efd, #0dcaf0);
+        }
+
+        .card-student {
+            background: linear-gradient(135deg, #198754, #20c997);
+        }
+
+        .card-elderly {
+            background: linear-gradient(135deg, #dc3545, #fd7e14);
+        }
+
+        /* ADVANCED BUTTON DESIGN */
+        .btn-gradient {
+            background: linear-gradient(135deg, #ffffff, #e9ecef);
+            color: #000;
+            border: none;
+            padding: 12px 30px;
+            font-weight: 600;
+            border-radius: 50px;
+            transition: all 0.4s ease;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+        }
+
+        .btn-gradient i {
+            margin-right: 8px;
+        }
+
+        .btn-gradient:hover {
+            background: linear-gradient(135deg, #0d6efd, #6610f2);
+            color: #fff;
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+        }
+
+        .btn-outline-modern {
+            border: 2px solid #0d6efd;
+            color: #0d6efd;
+            border-radius: 50px;
+            padding: 10px 28px;
+            font-weight: 600;
+            transition: 0.4s;
+        }
+
+        .btn-outline-modern:hover {
+            background: #0d6efd;
+            color: white;
+            box-shadow: 0 10px 25px rgba(13,110,253,0.5);
+        }
+
+        footer {
+            background: #212529;
+            color: #aaa;
+            padding: 15px 0;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="#">Fidha</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero text-center">
+    <div class="container">
+        <img src="FIDHA.jpeg" alt="Fidha">
+        <h1 class="mt-4 fw-bold">Hi, I'm Fidha</h1>
+        <p class="lead">Front End Developer | Student</p>
+
+        <!-- BEAUTIFUL BUTTON -->
+        <a href="#contact" class="btn btn-gradient btn-lg mt-4">
+            <i class="bi bi-briefcase-fill"></i> Hire Me
+        </a>
+    </div>
+</section>
+
+<!-- About -->
+<section id="about" class="py-5">
+    <div class="container text-center">
+        <h2 class="section-title">About Me</h2>
+        <p class="fs-5">
+            I am a passionate front-end developer who loves building modern,
+            responsive, and visually appealing websites using HTML, CSS, and Bootstrap.
+        </p>
+
+        <!-- SECONDARY BUTTON -->
+        <a href="#projects" class="btn btn-outline-modern mt-3">
+            <i class="bi bi-folder-fill"></i> View Projects
+        </a>
+    </div>
+</section>
+
+<!-- Skills -->
+<section id="skills" class="py-5 bg-light text-center">
+    <div class="container">
+        <h2 class="section-title">Skills</h2>
+        <span class="badge bg-primary skill-badge">HTML5</span>
+        <span class="badge bg-success skill-badge">CSS3</span>
+        <span class="badge bg-warning text-dark skill-badge">Bootstrap</span>
+        <span class="badge bg-info text-dark skill-badge">Java</span>
+        <span class="badge bg-secondary skill-badge">Responsive Design</span>
+        <span class="badge bg-dark skill-badge">Git Basics</span>
+    </div>
+</section>
+
+<!-- Projects -->
+<section id="projects" class="py-5">
+    <div class="container">
+        <h2 class="text-center section-title">Projects</h2>
+
+        <div class="row g-4">
+
+            <div class="col-md-4">
+                <div class="card project-card card-portfolio shadow h-100 text-center p-3">
+                    <i class="bi bi-person-circle fs-1"></i>
+                    <h5 class="mt-3">Portfolio Website</h5>
+                    <p>Responsive personal portfolio using HTML, CSS & Bootstrap.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card project-card card-student shadow h-100 text-center p-3">
+                    <i class="bi bi-database fs-1"></i>
+                    <h5 class="mt-3">Student Management</h5>
+                    <p>Java console-based application for managing student records.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card project-card card-elderly shadow h-100 text-center p-3">
+                    <i class="bi bi-heart-pulse fs-1"></i>
+                    <h5 class="mt-3">Elderly Care App</h5>
+                    <p>App for elderly well-being with reminders and emergency alerts.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="py-5 bg-light text-center">
+    <div class="container">
+        <h2 class="section-title">Contact</h2>
+
+        <a href="mailto:fidha@example.com" class="btn btn-outline-modern m-2">
+            <i class="bi bi-envelope-fill"></i> Email Me
+        </a>
+
+        <a href="#" class="btn btn-outline-modern m-2">
+            <i class="bi bi-telephone-fill"></i> Call Me
+        </a>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="text-center">
+    <p class="mb-0">© 2026 Fidha | All Rights Reserved</p>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
+
